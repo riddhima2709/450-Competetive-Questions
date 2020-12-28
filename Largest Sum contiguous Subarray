@@ -1,0 +1,35 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int i, n, meh, msf;
+	int arr[1000];
+	cout<<"Enter the number of elements of an array: ";
+	cin>>n;
+	cout<<"Enter elements of the array: "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cin>>arr[i];
+		
+	}
+	meh=0;
+	msf=INT_MIN;
+	for(i=0;i<n;i++)
+	{
+		meh=meh+arr[i];
+		if(meh<arr[i])
+		{
+			meh=arr[i];
+			
+		}
+		if(msf<meh)
+		{
+			msf=meh;
+		}
+	
+	
+	}
+		cout<<"Largest contiguous subarray sum is: "<<msf;
+	
+}
